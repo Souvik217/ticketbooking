@@ -1,0 +1,28 @@
+<mvc:View controllerName="ns.ticketbooking.controller.Payment"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartform="sap.ui.comp.smartform" 
+	xmlns:smartfield="sap.ui.comp.smartfield" class="sapUiSizeCompact"
+    id="PaymentPage">
+	
+    <Page id="page3" title="{i18n>Payment}" showNavButton="true" navButtonPress="goToAvailability" >
+        <content>
+            <Panel headerText="">
+                <FlexBox
+                    height="200px"
+                    alignItems="Center"
+                    justifyContent="Center">
+                    <Title level="H3" text="Your Amount is xxxx" />
+                    
+                </FlexBox>
+            </Panel>
+            <VBox id="VBox2" fitContainer="true" alignItems="Center" alignContent="Center">
+                <items>
+                    
+                    <Button id="Button4" width="12rem" text="Proceed to Pay" type="Emphasized" press="onTapPay" class="sapUiSmallMarginEnd" />
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>

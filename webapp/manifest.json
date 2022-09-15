@@ -1,0 +1,177 @@
+{
+  "_version": "1.40.0",
+  "sap.app": {
+    "id": "ns.ticketbooking",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.7.3",
+      "toolsId": "b2b9b787-b724-4ded-82ca-bd1ff4de2d5c"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/sap/ZUI_USER1",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.102.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ns.ticketbooking.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {}
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "ns.ticketbooking.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+          "name": "RouteLoginPage",
+          "pattern": "",
+          "target": 
+            "TargetLoginPage"
+        },
+        {
+          "name": "Booking",
+          "pattern": "/booking",
+          "target": 
+            "TargetBookingPage"
+          
+        },
+        {
+          "name": "Availability",
+          "pattern": "/availability",
+          "target": 
+            "TargetAvailabilityPage"
+          
+        },
+        {
+          "name": "Payment",
+          "pattern": "/payment",
+          "target": 
+            "TargetPaymentPage"
+          
+        },
+        {
+          "name": "Final",
+          "pattern": "/final",
+          "target": 
+            "TargetFinalPage"
+          
+        }
+
+      ],
+      "targets": {
+        "TargetLoginPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "LoginPage",
+          "viewName": "App"
+        },
+        "TargetBookingPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "BookingPage",
+          "viewName": "Booking"
+        },
+        "TargetAvailabilityPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "AvailabilityPage",
+          "viewName": "Availability"
+        },
+        "TargetPaymentPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "PaymentPage",
+          "viewName": "Payment"
+        },
+        "TargetFinalPage": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "FinalPage",
+          "viewName": "Final"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "ns.ticketbooking.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

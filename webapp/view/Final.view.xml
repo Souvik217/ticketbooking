@@ -1,0 +1,27 @@
+<mvc:View controllerName="ns.ticketbooking.controller.Final"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartform="sap.ui.comp.smartform" 
+	xmlns:smartfield="sap.ui.comp.smartfield" 
+    xmlns:form="sap.ui.layout.form"
+    class="sapUiSizeCompact"
+    id="FinalPage">
+	
+    <Page id="page3" title="{i18n>Confirmation Page}" showNavButton="true" navButtonPress="goToLogin" >
+        <MessageStrip
+                text="Success!!! Your Ticket Has Been Booked."
+                type="Success"
+                showIcon="true"
+                showCloseButton="true"
+                class="sapUiMediumMarginBottom">
+            </MessageStrip>
+        <content>
+            <VBox id="VBox2" fitContainer="true" alignItems="Center" alignContent="Center">
+                <Button id="Button4" width="12rem" text="Logout" type="Emphasized" press="onTapLogout" class="sapUiSmallMarginEnd" />
+                
+            </VBox>
+        </content>
+        
+    </Page>
+</mvc:View>

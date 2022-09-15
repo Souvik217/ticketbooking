@@ -1,0 +1,41 @@
+<mvc:View controllerName="ns.ticketbooking.controller.Availability"
+    xmlns:mvc="sap.ui.core.mvc" 
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:smartform="sap.ui.comp.smartform" 
+	xmlns:smartfield="sap.ui.comp.smartfield" 
+    xmlns:form="sap.ui.layout.form"
+    class="sapUiSizeCompact"
+    id="BookingPage">
+
+    
+	
+    <Page id="page3" title="{i18n>Bus Available}" showNavButton="true" navButtonPress="goToLogin" >
+        <form:SimpleForm editable="true" layout="ResponsiveGridLayout" 
+                                adjustLabelSpan="false" labelSpanL="4" labelSpanM="4" labelSpanS="12" 
+                                columnsL="1" columnsM="1" emptySpanL="4" emptySpanM="4">
+                                    <form:content>
+                                        <Label text="Bus Name" ></Label>
+                                        <Input id="name"></Input>
+                                        <Label text="Bus Number" ></Label>
+                                        <Input id="number" ></Input>
+                                        <Label text="Date" ></Label>
+                                        <Input id="Date"></Input>
+                                        <Label text="Available Seat" ></Label>
+                                        <Input id="seat"></Input>
+                                    </form:content>
+                                </form:SimpleForm>
+        <content>
+        
+            <VBox id="VBox2" fitContainer="true" alignItems="Center" alignContent="Center">
+                
+                <items>
+                    <Button id="Button5" width="12rem" text="Go Back" type="Emphasized" press="onTapBack" class="sapUiSmallMarginEnd" />
+                    <Button id="Button4" width="12rem" text="Payment" type="Emphasized" press="onTapPayment" class="sapUiSmallMarginEnd" />
+                </items>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
